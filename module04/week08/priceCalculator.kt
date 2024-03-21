@@ -1,4 +1,6 @@
 fun main() {
+// Prompting the user to enter wholesale and setup percentage 
+ 
     var sale1: Int? = null
     while (sale1 == null) {
         print("Enter the item's wholesale cost: ")
