@@ -1,0 +1,22 @@
+fun main() {
+
+  print("Enter movie rating (G, PG, PG-13, R, NC-17): ")
+  val rating = readLine()!!
+
+  print("Enter your age: ") 
+  val age = readLine()!!.toInt()
+
+  if (rating == "G") {
+    println("You are allowed to see this movie.")
+  } else if (rating == "PG" && age >= 0) {
+    println("You are allowed to see this movie.") 
+  } else if (rating == "PG-13" && age >= 13) {
+    println("You are allowed to see this movie.")
+  } else if (rating == "R" && age >= 17) {
+    println("You are allowed to see this movie.")
+  } else if (rating == "NC-17" && age >= 18) {
+    println("You are allowed to see this movie.")
+  } else {
+    println("You are not allowed to see this movie.")
+  }
+}
