@@ -1,0 +1,22 @@
+fun main() {
+    val storeNames = arrayOf("Store 1", "Store 2", "Store 3", "Store 4", "Store 5")
+    val sales = IntArray(5)
+
+    // Get sales input from the user
+    for (i in 0 until 5) {
+        print("Enter today's sales for ${storeNames[i]}: ")
+        sales[i] = readLine()?.toIntOrNull() ?: 0
+    }
+
+    // Display the bar chart
+    println("\nSALES BAR CHART")
+
+    for (i in 0 until 5) {
+        print("${storeNames[i]}: ")
+        val asterisksCount = sales[i] / 100
+        repeat(asterisksCount) {
+            print("*")
+        }
+        println()
+    }
+}
