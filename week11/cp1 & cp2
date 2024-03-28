@@ -1,0 +1,16 @@
+class CellPhones(val brand: String, val model: String, val price: Double)
+
+fun main() {
+    val cp1 = CellPhones("Samsung", "Galaxy S21", 999.99)
+    val cp2 = CellPhones("Apple", "iPhone 12", 1099.99)
+
+    println("Cell Phone 1:")
+    println("Brand: ${cp1.brand}")
+    println("Model: ${cp1.model}")
+    println("Price: \$${cp1.price}")
+
+    println("\nCell Phone 2:")
+    println("Brand: ${cp2.brand}")
+    println("Model: ${cp2.model}")
+    println("Price: \$${cp2.price}")
+}
