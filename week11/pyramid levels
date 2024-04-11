@@ -1,60 +1,20 @@
-BEGIN
-//prompt user for the number of pyramid levels 
-PRINT "Enter the number of pyramid levels:"
-READ levels
+  // ask user to enter pyramid level
 
-//Validate input (simple check for positive number)
-IF levels <= 0 THEN 
-    PRINT "Please enter a positive number"
-    EXIT
-    END IF
-
-    //Initialize loop variable for levels 
-    SET levelCounter = 1
-    //Outer loop for each level in the pyramid
-    WHILE levelCounter <= levels DO
-        //Initialize stars to print for the current level 
-        SET stars = ""
-        //Initialize loop variable for stars in the current level 
-        SET starCounter = 1
-        //Inner loop to append stars for the current level 
-        WHILE starCOunter <=levelCounter DO
-            // Append a star for the current levelstars = stars +"*"
-            INCREMENT starCounter
-            END WHILE
-            // Print the stars fo the current level 
-            PRINT stars 
-            //Move to the next level 
-            INCREMENT levelCounter
-            ENDWHILE 
-            END
-            
 fun main() {
+    print("Enter the pyramid level: ")
+    val level = scanner.nextInt()
 
-  // Prompt user to enter pyramid level
-  print("Enter pyramid level (minimum 6): ")
-
-  // Read level input 
-  val levelInput = readLine()!!.toInt()
-
-  // Check for minimum level
-  val level = if(levelInput < 6) 6 else levelInput
-
-  // Outer loop iterates levels
-  for (i in 1..level) {
-
-    // Inner loop prints asterisks
-    for (j in 1..i) {
-      print("*")
+    for (i in 1..level) {
+        for (j in 1..i) {
+            print("*")
+            println("**")
+            println("***")
+            println("****")
+            println("*****")
+            println("******")
+            println("*******")
+        }
+        println()
     }
-
-    // Print new line after each level  
-    println("*")
-    println("**")
-    println("***")
-    println("****")
-    println("*****")
-    println("******")
-    println("*******")
-  }
 }
+
